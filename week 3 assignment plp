@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Basics & The Box Model</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <h1>Welcome to My CSS Box Model Demo</h1>
+        <p>Understanding margins, padding, and borders in CSS.</p>
+    </header>
+
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#section1">Introduction</a></li>
+            <li><a href="#section2">The Box Model</a></li>
+            <li><a href="#section3">Styled Cards</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="section1" class="content-section">
+            <h2>Introduction</h2>
+            <p>
+                This page demonstrates basic CSS styling and how the Box Model works.
+                By adjusting margins, padding, and borders, you can control the spacing
+                and layout of elements in a web page.
+            </p>
+        </section>
+
+        <section id="section2" class="content-section">
+            <h2>The CSS Box Model</h2>
+            <p>
+                Every HTML element is treated as a rectangular box, which consists of:
+            </p>
+            <ul>
+                <li><strong>Content</strong> – the text or image inside the box</li>
+                <li><strong>Padding</strong> – space between the content and border</li>
+                <li><strong>Border</strong> – the edge surrounding the padding</li>
+                <li><strong>Margin</strong> – space between this element and others</li>
+            </ul>
+        </section>
+
+        <section id="section3" class="card-container">
+            <article class="card">
+                <h3>Card 1</h3>
+                <p>This is a styled card with padding, margin, and border applied.</p>
+                <button>Learn More</button>
+            </article>
+
+            <article class="card">
+                <h3>Card 2</h3>
+                <p>This is another card, styled to demonstrate the Box Model visually.</p>
+                <button>Learn More</button>
+            </article>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 Your Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    background-color: #f9f9f9;
+}
+
+/* Header */
+.site-header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px solid #388E3C;
+}
+
+/* Navigation */
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+}
+
+.main-nav li {
+    margin: 0 15px;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.main-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Content Sections */
+.content-section {
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Card Container */
+.card-container {
+    display: flex;
+    gap: 20px;
+    margin: 20px;
+}
+
+/* Individual Card Styling */
+.card {
+    background-color: white;
+    border: 2px solid #ccc;
+    padding: 15px;
+    margin: 10px;
+    width: 45%;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 5px;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+/* Button Styling */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Footer */
+.site-footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #333;
+    color: white;
+    margin-top: 20px;
+}
